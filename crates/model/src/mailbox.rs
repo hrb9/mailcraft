@@ -2218,7 +2218,13 @@ impl Mailbox {
 
     /// Move a folder the user made under `parent` (or to the top level).
     pub fn move_folder(&mut self, id: Id, parent: Option<Id>) -> Result<(), ModelError> {
-        let f = self.folder(id).ok_or(not_found("folder", id))?.clone();
+        self.move_folder_as(id, parent, None)
+    }
+
+    /// [`Self::move_folder`], under `name` there when given: the name is checked against the new
+    /// parent's folders only, and nothing changes when the move is refused.
+    pub fn move_folder_as(&mut self, id: Id, parent: Option<Id>, name: Option<&str>) -> Result<(), ModelError> {
+        let mut f = self.folder(id).ok_or(not_found("folder", id))?.clone();
         if f.kind != FolderKind::Custom || f.server_owned() {
             return Err(invalid(format!("{} can't be moved", f.name)));
         }
@@ -2243,10 +2249,18 @@ impl Mailbox {
                 return Err(invalid("folders are nested too deeply"));
             }
         }
+        if let Some(name) = name {
+            f.name = clean_name(name).ok_or_else(|| invalid("a folder needs a name"))?;
+            if f.name.contains('/') && !self.names_may_hold_slashes(f.account) {
+                return Err(invalid("a folder name can't contain /"));
+            }
+        }
         if self.name_taken(f.account, parent, &f.name, Some(id)) {
             return Err(invalid(format!("a folder named \"{}\" already exists there", f.name)));
         }
+        let new_name = f.name.clone();
         let f = self.folder_mut(id)?;
+        f.name = new_name;
         f.set_parent(parent);
         Ok(())
     }

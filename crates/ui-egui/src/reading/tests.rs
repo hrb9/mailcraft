@@ -1675,9 +1675,14 @@ fn a_long_list_of_remembered_senders_is_folded_and_paged() {
     let page = |harness: &Window| ["sender00@", "sender19@", "sender20@", "sender39@", "sender40@", "@kite.example"].map(|s| says(harness, s));
     assert_eq!(page(&harness), [true, true, false, false, false, false]);
     assert!(says(&harness, "Page 1 of 3") && harness.get_by_label("Previous").accesskit_node().is_disabled());
+    // Spelling sits above Pictures, so Next can start below this window.
+    harness.get_by_label("Next").scroll_to_me();
+    harness.run_steps(3);
     harness.get_by_label("Next").click();
     harness.run_steps(3);
     assert_eq!(page(&harness), [false, false, true, true, false, false]);
+    harness.get_by_label("Next").scroll_to_me();
+    harness.run_steps(3);
     harness.get_by_label("Next").click();
     harness.run_steps(3);
     assert_eq!(page(&harness), [false, false, false, false, true, true]);

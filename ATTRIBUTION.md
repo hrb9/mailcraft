@@ -14,6 +14,9 @@ Generated-in-code art is original and has no file to list: the UI icon set (`cra
 | `assets/trademarks/ucs-labs-monogram-white-128.png` | UCS Care Group Limited (UCS Labs) | own brand pack | trademark, all rights reserved, not MIT OR Apache-2.0; see [TRADEMARKS.md](TRADEMARKS.md) | 128 px render of the white monogram (`rsvg-convert`), shown in About on dark themes |
 | `docs/images/swipe-left-delete.png` | MailCraft contributors | screenshot of MailCraft using its invented sample mailbox, made with `crates/ui-egui/examples/ui_shot.rs` | MIT OR Apache-2.0 | Swipe left to delete |
 | `docs/images/swipe-right-archive.png` | MailCraft contributors | screenshot of MailCraft using its invented sample mailbox, made with `crates/ui-egui/examples/ui_shot.rs` | MIT OR Apache-2.0 | Swipe right to archive |
+| `docs/images/imap-folder-labels-before.png` | MailCraft contributors | screenshot of MailCraft with a synthetic IMAP folder listing, made with `crates/ui-egui/examples/ui_shot.rs` | MIT OR Apache-2.0 | Nested IMAP folder label before #2035 |
+| `docs/images/imap-folder-labels-light.png` | MailCraft contributors | screenshot of MailCraft with a synthetic IMAP folder listing, made with `crates/ui-egui/examples/ui_shot.rs` | MIT OR Apache-2.0 | Nested IMAP folder label in light theme after #2035 |
+| `docs/images/imap-folder-labels-dark.png` | MailCraft contributors | screenshot of MailCraft with a synthetic IMAP folder listing, made with `crates/ui-egui/examples/ui_shot.rs` | MIT OR Apache-2.0 | Nested IMAP folder label in dark theme after #2035 |
 | `docs/images/tray-unread-badge.png` | MailCraft contributors | Rendered preview of MailCraft’s own tray icon, exported from `apps/mailcraft/src/tray.rs` and shown at enlarged and 24 px sizes on light and dark backgrounds; not a desktop capture | MIT OR Apache-2.0 | Unread tray badge documentation and pull request |
 | `docs/images/mail-dark.png` | MailCraft contributors | screenshot of MailCraft itself showing its sample mailbox (invented people and text), made with `crates/ui-egui/examples/ui_shot.rs` | MIT OR Apache-2.0 | README: the Inbox and reading pane, dark theme |
 | `docs/images/html-mail.png` | MailCraft contributors | screenshot of MailCraft itself showing its sample mailbox (invented people and text), made with `crates/ui-egui/examples/ui_shot.rs` | MIT OR Apache-2.0 | README: an HTML message with a table and a quoted thread |
@@ -67,6 +70,9 @@ Generated-in-code art is original and has no file to list: the UI icon set (`cra
 | `assets/fonts/OFL-SourceSans3.txt` | (licence text) | upstream project | — |  |
 | `assets/fonts/OFL-JetBrainsMono.txt` | (licence text) | upstream project | — |  |
 | `assets/fonts/OFL-NotoSansGeorgian.txt` | (licence text) | upstream project | — |  |
+| `assets/dictionaries/en_US/en_US.dic` | Kevin Atkinson and the SCOWL contributors | official `en_US` Hunspell dictionary, release 2026.02.25, https://github.com/en-wl/wordlist/releases/tag/rel-2026.02.25 (`hunspell-en_US-2026.02.25.zip`, SHA-256 `ac8e73310e951d88c52c2cf2ba54ceaca34f8486a81630ac8a75dc5f931179f9`), unmodified | SCOWL licence (HPND-style); full notice in [US English spelling dictionary (SCOWL): copyright notice](#us-english-spelling-dictionary-scowl-copyright-notice) | The word list of MailCraft's built-in US English spelling dictionary, on every platform (`crates/spell`) |
+| `assets/dictionaries/en_US/en_US.aff` | Geoff Kuenning (Ispell `english.aff`), modified by Kevin Atkinson | same release as `en_US.dic`, unmodified | Ispell BSD-style licence; full notice in [US English spelling dictionary (SCOWL): copyright notice](#us-english-spelling-dictionary-scowl-copyright-notice) | The affix rules (prefixes, suffixes, ordinals, replacements) of the built-in US English spelling dictionary |
+| `assets/dictionaries/en_US/README_en_US.txt` | Kevin Atkinson | same release as `en_US.dic`, unmodified | SCOWL licence (HPND-style); full notice in [US English spelling dictionary (SCOWL): copyright notice](#us-english-spelling-dictionary-scowl-copyright-notice) | The dictionary's own README with its copyright notice; shipped beside the binary in every package |
 | `crates/smime/testdata/ca.rsa.der` | IETF LAMPS working group (D. K. Gillmor) | RFC 9216 §3.1, "Sample LAMPS RSA Certification Authority", in DER | BSD-3-Clause (IETF Trust Legal Provisions, Code Components) | Test vector: the trust anchor of the S/MIME checks (#30) |
 | `crates/smime/testdata/alice.sign.der` | IETF LAMPS working group (D. K. Gillmor) | RFC 9216 §4.1, Alice's signature verification certificate (`alice@smime.example`), in DER | BSD-3-Clause (IETF Trust Legal Provisions, Code Components) | Test vector (#30) |
 | `crates/smime/testdata/detached.eml` | MailCraft contributors | signed with RFC 9216's example key for Alice by `openssl cms -sign` (SHA-256, detached), invented text | MIT OR Apache-2.0 (the certificate in it: as above) | Test vector (#30); no private key is in the repository |
@@ -408,3 +414,87 @@ Generated-in-code art is original and has no file to list: the UI icon set (`cra
 | `apps/mailcraft-android/app/src/test/snapshots/images/work.mailcraft.android_DarkRecolourScreenshotTest_darkBody_recolour_dark_body_dark.png` | MailCraft contributors | Drawn by Paparazzi (`cargo xtask mobile`, `recordPaparazziDebug`) from the app's own screens with invented example.org mail | MIT OR Apache-2.0 | Golden screenshot of the Android reading view's dark recolouring (MR8) |
 | `apps/mailcraft-android/app/src/test/snapshots/images/work.mailcraft.android_DarkRecolourScreenshotTest_darkBody_recolour_dark_body_light.png` | MailCraft contributors | Drawn by Paparazzi (`cargo xtask mobile`, `recordPaparazziDebug`) from the app's own screens with invented example.org mail | MIT OR Apache-2.0 | Golden screenshot of the Android reading view's dark recolouring (MR8) |
 | `apps/mailcraft-android/app/src/test/snapshots/images/work.mailcraft.android_DarkRecolourScreenshotTest_ownDarkDesign_recolour_own_dark_design_dark.png` | MailCraft contributors | Drawn by Paparazzi (`cargo xtask mobile`, `recordPaparazziDebug`) from the app's own screens with invented example.org mail | MIT OR Apache-2.0 | Golden screenshot of the Android reading view's dark recolouring (MR8) |
+
+## US English spelling dictionary (SCOWL): copyright notice
+
+MailCraft's built-in US English spelling dictionary is the official SCOWL `en_US` Hunspell dictionary, version 2026.02.25, from https://github.com/en-wl/wordlist/releases/tag/rel-2026.02.25 (also linked from https://wordlist.aspell.net/dicts/). Its files are in `assets/dictionaries/en_US/` unmodified, and MailCraft reads them with its own checker (`crates/spell`): no Hunspell engine is included. The notice below is copied verbatim from the section `COPYRIGHT, SOURCES, and CREDITS` of `README_en_US.txt`.
+
+```text
+COPYRIGHT, SOURCES, and CREDITS:
+
+The English dictionaries come directly from SCOWL and is thus under
+the same copyright terms as SCOWL.  The affix file is a heavily
+modified version of the original english.aff file, which was
+released as part of Geoff Kuenning's Ispell and as such is covered by
+his BSD license.
+
+Copyright 2000-2026 by Kevin Atkinson
+
+Permission to use, copy, modify, distribute, and sell any part of SCOWLv2, or
+word lists created from it, is hereby granted without fee, provided that the
+above copyright notice appears in all copies and that both the above
+copyright notice and this notice appear in supporting documentation.  Kevin
+Atkinson makes no representations about the suitability of this database for
+any purpose.  It is provided "as is" without express or implied warranty.
+
+SCOWL is derived from many sources, most of which are in the Public Domain.
+Data from the Corpus of Contemporary American English (COCA) was also used.
+
+All data from COCA comes from 3-gram data that is not freely available;
+however, the usage is within the rights given by the NDA that was signed when
+purchasing the data.  More information on COCA is available at
+https://www.english-corpora.org/coca/.
+
+The primary source of words for SCOWL comes from 12dicts and ENABLE2K.  Both
+are in the Public Domain, but Alan Beale <biljir@pobox.com> deserves special
+credit as he is the author of 12dicts and a major contributor to ENABLE2K.  In
+addition, he gave me an incredible amount of feedback and created a number of
+special lists in order to help improve the overall quality of SCOWL.
+
+The initial information for Australian English comes from Benjamin Titze:
+
+  Copyright 2016 by Benjamin Titze
+
+  Permission to use, copy, modify, distribute and sell this array, the
+  associated software, and its documentation for any purpose is hereby
+  granted without fee, provided that the above copyright notice appears
+  in all copies and that both that copyright notice and this permission
+  notice appear in supporting documentation. Benjamin Titze makes no
+  representations about the suitability of this array for any
+  purpose. It is provided "as is" without express or implied warranty.
+
+Affix file Copyright:
+
+  Copyright 1993, Geoff Kuenning, Granada Hills, CA
+  All rights reserved.
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  1. Redistributions of source code must retain the above copyright
+     notice, this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+  3. All modifications to the source code must be clearly marked as
+     such.  Binary redistributions based on modified source code
+     must be clearly marked as modified versions in the documentation
+     and/or other materials provided with the distribution.
+  (clause 4 removed with permission from Geoff Kuenning)
+  5. The name of Geoff Kuenning may not be used to endorse or promote
+     products derived from this software without specific prior
+     written permission.
+
+  THIS SOFTWARE IS PROVIDED BY GEOFF KUENNING AND CONTRIBUTORS ``AS IS'' AND
+  ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  ARE DISCLAIMED.  IN NO EVENT SHALL GEOFF KUENNING OR CONTRIBUTORS BE LIABLE
+  FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+  OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+  HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+  OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+  SUCH DAMAGE.
+```

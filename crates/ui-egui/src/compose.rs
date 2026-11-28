@@ -37,6 +37,24 @@ pub(crate) fn focused_header(ctx: &egui::Context, compose: u64) -> Option<egui::
     ["to", "cc", "bcc", "replyTo", "subject"].iter().any(|key| header_id(compose, key) == focus).then_some(focus)
 }
 
+/// The Subject line. The text is the same single-line editor as To and Cc, shown so its galley
+/// is available for spelling. Its id is [`header_id`], so the ribbon acts on it while it has the
+/// keyboard. To and Cc stay on [`recipient_field`].
+fn subject_field(app: &mut MailApp, ui: &mut Ui, label: &str, text: &str, label_width: f32) {
+    let at = line(ui, label, label_width, 0.0);
+    let id = header_id(app.session.compose_id().unwrap_or_default(), "subject");
+    let mut buf = text.to_string();
+    let edit = line_edit(&mut buf, id, "", at.width());
+    // `Ui::put` is this scope with the text centred in the line. `show` keeps that and yields the galley.
+    let out = ui
+        .scope_builder(egui::UiBuilder::new().max_rect(at).layout(egui::Layout::centered_and_justified(egui::Direction::TopDown)), |ui| edit.show(ui))
+        .inner;
+    let replaced = crate::spelling_subject::decorate(app, ui, &out, &buf);
+    if !replaced && out.response.changed() {
+        let _ = app.execute("compose.set", json!({"subject": buf}));
+    }
+}
+
 /// A labelled line, with the rule under it; where its text goes. `right` is room kept free at
 /// the line's right end for something drawn there (the Bcc link).
 fn line(ui: &mut Ui, label: &str, label_width: f32, right: f32) -> Rect {
@@ -564,12 +582,7 @@ fn header_fields(app: &mut MailApp, ui: &mut Ui, c: &Shown, focus_to: bool) {
     if !c.reply_to.is_empty() || ui.memory(|m| m.has_focus(header_id(compose, "replyTo"))) {
         recipient_field(app, ui, "replyTo", reply_to, &c.reply_to, label_width, false);
     }
-    let id = header_id(compose, "subject");
-    let at = line(ui, subject, label_width, 0.0);
-    let mut new = c.subject.clone();
-    if crate::text_menu::field(ui.put(at, line_edit(&mut new, id, "", at.width()))).changed() {
-        let _ = app.execute("compose.set", json!({"subject": new}));
-    }
+    subject_field(app, ui, subject, &c.subject, label_width);
     if bcc_link {
         // A quiet way to get the Bcc line.
         let last = ui.min_rect();

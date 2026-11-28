@@ -34,6 +34,7 @@ mailcraft-proto = { path = "../crates/proto" }
 mailcraft-pst = { path = "../crates/pst" }
 mailcraft-oab = { path = "../crates/oab" }
 mailcraft-smime = { path = "../crates/smime" }
+mailcraft-spell = { path = "../crates/spell" }
 mailcraft-tnef = { path = "../crates/tnef" }
 mailcraft-vcard = { path = "../crates/vcard" }
 
@@ -260,6 +261,13 @@ bench = false
 [[bin]]
 name = "header_block"
 path = "fuzz_targets/header_block.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "spell"
+path = "fuzz_targets/spell.rs"
 test = false
 doc = false
 bench = false

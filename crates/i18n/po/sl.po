@@ -142,6 +142,12 @@ msgid "\"{title}\" is cancelled, so it can't be added to the selection."
 msgstr "»{title}« je preklican, zato ga ni mogoče dodati izboru."
 
 #. what a command says
+#: crates/engine/src/undo.rs
+#, fuzzy
+msgid "'{subject}' isn't moved: its mail server has moved or removed it since, or the folder it was to go to is gone or won't take it."
+msgstr "»{subject}« ni premaknjeno: poštni strežnik ga je medtem premaknil ali odstranil ali pa mapa, v katero naj bi šlo, ne obstaja več ali ga ne sprejme."
+
+#. what a command says
 #: crates/engine/src/cmd/graph_send.rs
 #, fuzzy
 msgid "'{subject}' may have been sent, even if its copy in Sent (or Drafts) is still marked as a draft. It is held in the Outbox."
@@ -566,6 +572,11 @@ msgstr "Datum"
 #, fuzzy
 msgid "A desktop alert for the mail this rule acts on as it arrives, while MailCraft isn't the window in front, even when the one for new mail is off in File › Options"
 msgstr "Namizno opozorilo za pošto, na katero se pravilo nanaša, ko prispe, medtem ko MailCraft ni sprednje okno, tudi če je opozorilo za novo pošto izklopljeno v Datoteka › Možnosti"
+
+#. interface
+#: crates/ui-egui/src/spelling.rs
+msgid "A dictionary word is letters, digits, apostrophes and hyphens, up to 64 characters."
+msgstr ""
 
 #. android
 #: apps/mailcraft-android/app/src/main/kotlin/work/mailcraft/android/ShareLoad.kt
@@ -1020,7 +1031,7 @@ msgid "Actual Size"
 msgstr "Dejanska velikost"
 
 #. interface
-#: crates/ui-egui/src/dialogs.rs crates/ui-egui/src/forms.rs crates/ui-egui/src/forms/junk.rs
+#: crates/ui-egui/src/backstage.rs crates/ui-egui/src/dialogs.rs crates/ui-egui/src/forms.rs crates/ui-egui/src/forms/junk.rs
 #, fuzzy
 msgid "Add"
 msgstr "Dodaj"
@@ -1248,6 +1259,11 @@ msgstr ""
 #, fuzzy
 msgid "Add to Contacts"
 msgstr "Dodaj med stike"
+
+#. command label, interface
+#: crates/ui-egui/src/lib.rs crates/ui-egui/src/spelling.rs crates/ui-egui/src/spelling_dialog.rs
+msgid "Add to Dictionary"
+msgstr ""
 
 #. command label, interface
 #: crates/engine/src/cmd/folder.rs crates/engine/src/cmd/people.rs crates/ui-egui/src/nav.rs crates/ui-egui/src/people_view.rs
@@ -3251,6 +3267,11 @@ msgstr "Praznuj"
 msgid "Certificates"
 msgstr "Potrdila"
 
+#. interface
+#: crates/ui-egui/src/spelling_dialog.rs
+msgid "Change"
+msgstr ""
+
 #. ribbon
 #: crates/ui-egui/src/ribbon.rs
 #, fuzzy
@@ -3260,6 +3281,11 @@ msgid ""
 msgstr ""
 "Spremeni\n"
 "pogled"
+
+#. interface
+#: crates/ui-egui/src/spelling_dialog.rs
+msgid "Change All"
+msgstr ""
 
 #. command label
 #: crates/engine/src/cmd/auto_replies.rs
@@ -3332,6 +3358,11 @@ msgstr "Spremeni ime tega računa, strežnike in vpis"
 #, fuzzy
 msgid "Change this account's name, sign-in and mail to keep offline"
 msgstr "Spremeni ime tega računa, vpis in pošto za hranjenje brez povezave"
+
+#. interface
+#: crates/ui-egui/src/spelling_dialog.rs
+msgid "Change to"
+msgstr ""
 
 #. interface
 #: crates/ui-egui/src/reading/signature.rs
@@ -3452,6 +3483,11 @@ msgid "Check Recipients"
 msgstr "Preveri prejemnike"
 
 #. interface
+#: crates/ui-egui/src/spelling.rs
+msgid "Check Spelling…"
+msgstr ""
+
+#. interface
 #: crates/ui-egui/src/account_setup.rs
 #, fuzzy
 msgid "Check both servers before you connect."
@@ -3487,6 +3523,11 @@ msgstr "Preveri nove pisave"
 msgid "Check for new versions"
 msgstr "Preverjaj nove različice"
 
+#. interface
+#: crates/ui-egui/src/backstage.rs
+msgid "Check spelling as you type"
+msgstr ""
+
 #. ribbon
 #: crates/ui-egui/src/ribbon.rs
 #, fuzzy
@@ -3516,6 +3557,11 @@ msgstr "Preverjeno pri overitelju potrdil"
 #, fuzzy
 msgid "Checking for a new version…"
 msgstr "Preverjanje nove različice…"
+
+#. interface
+#: crates/ui-egui/src/spelling_dialog.rs
+msgid "Checking spelling…"
+msgstr ""
 
 #. interface
 #: crates/ui-egui/src/account_setup.rs
@@ -3776,7 +3822,7 @@ msgid "Clock"
 msgstr "Ura"
 
 #. android, interface, ribbon
-#: apps/mailcraft-android/app/src/main/kotlin/work/mailcraft/android/AttachmentsView.kt apps/mailcraft-android/app/src/main/kotlin/work/mailcraft/android/CalendarEditor.kt apps/mailcraft-android/app/src/main/kotlin/work/mailcraft/android/IncomingLayers.kt crates/ui-egui/src/account_setup.rs crates/ui-egui/src/account_setup/exchange.rs crates/ui-egui/src/compose.rs crates/ui-egui/src/dialogs.rs crates/ui-egui/src/find_replace.rs crates/ui-egui/src/folder_properties.rs crates/ui-egui/src/forms.rs crates/ui-egui/src/import_pst.rs crates/ui-egui/src/meeting_dialogs.rs crates/ui-egui/src/meeting_dialogs/share.rs crates/ui-egui/src/merge_contacts.rs crates/ui-egui/src/reminders.rs crates/ui-egui/src/report_problem.rs crates/ui-egui/src/ribbon.rs crates/ui-egui/src/symbol.rs crates/ui-egui/src/sync_panel.rs crates/ui-egui/src/tasks_view.rs crates/ui-egui/src/view_source.rs
+#: apps/mailcraft-android/app/src/main/kotlin/work/mailcraft/android/AttachmentsView.kt apps/mailcraft-android/app/src/main/kotlin/work/mailcraft/android/CalendarEditor.kt apps/mailcraft-android/app/src/main/kotlin/work/mailcraft/android/IncomingLayers.kt crates/ui-egui/src/account_setup.rs crates/ui-egui/src/account_setup/exchange.rs crates/ui-egui/src/compose.rs crates/ui-egui/src/dialogs.rs crates/ui-egui/src/find_replace.rs crates/ui-egui/src/folder_properties.rs crates/ui-egui/src/forms.rs crates/ui-egui/src/import_pst.rs crates/ui-egui/src/meeting_dialogs.rs crates/ui-egui/src/meeting_dialogs/share.rs crates/ui-egui/src/merge_contacts.rs crates/ui-egui/src/reminders.rs crates/ui-egui/src/report_problem.rs crates/ui-egui/src/ribbon.rs crates/ui-egui/src/spelling_dialog.rs crates/ui-egui/src/symbol.rs crates/ui-egui/src/sync_panel.rs crates/ui-egui/src/tasks_view.rs crates/ui-egui/src/view_source.rs
 #, fuzzy
 msgid "Close"
 msgstr "Zapri"
@@ -4509,11 +4555,21 @@ msgstr "Trenutni poštni predal"
 msgid "Current View"
 msgstr "Trenutni pogled"
 
+#. interface
+#: crates/ui-egui/src/spelling.rs
+msgid "Custom Dictionary…"
+msgstr ""
+
 #. interface, name
 #: crates/ui-egui/src/backstage.rs crates/ui-egui/src/theme/accent.rs
 #, fuzzy
 msgid "Custom color"
 msgstr "Barva po meri"
+
+#. interface
+#: crates/ui-egui/src/backstage.rs
+msgid "Custom dictionary"
+msgstr ""
 
 #. command label, interface, name, ribbon
 #: crates/engine/src/cmd/format.rs crates/ui-egui/src/calendar_view.rs crates/ui-egui/src/lib.rs crates/ui-egui/src/menubar.rs crates/ui-egui/src/ribbon.rs
@@ -4692,6 +4748,11 @@ msgstr "Zmanjšaj zamik"
 #, fuzzy
 msgid "Default"
 msgstr "Privzeto"
+
+#. interface
+#: crates/ui-egui/src/backstage.rs
+msgid "Default spelling language"
+msgstr ""
 
 #. command label, interface, name, ribbon
 #: crates/engine/src/cmd/send_later.rs crates/ui-egui/src/ribbon.rs crates/ui-egui/src/send_later.rs
@@ -5756,6 +5817,11 @@ msgstr "Konča se"
 #, fuzzy
 msgid "Ends on a day"
 msgstr "Konča se na dan"
+
+#. interface
+#: crates/ui-egui/src/spelling.rs
+msgid "English (United States, built-in)"
+msgstr ""
 
 #. interface
 #: crates/ui-egui/src/send_later.rs
@@ -7591,6 +7657,31 @@ msgstr "Če imate lasten skrbniški račun, vam prva izbira omogoča, da se z nj
 msgid "If you have one, paste its application (client) ID here. It comes from a Microsoft Entra app registration: a public client with the redirect URI http://localhost, for accounts in any directory and personal accounts."
 msgstr "Če ga imate, sem prilepite njegov ID aplikacije (odjemalca). Izhaja iz registracije aplikacije v Microsoft Entra: javni odjemalec z URI preusmeritve http://localhost, za račune v katerem koli imeniku in osebne račune."
 
+#. command label, interface
+#: crates/ui-egui/src/lib.rs crates/ui-egui/src/spelling.rs crates/ui-egui/src/spelling_dialog.rs
+msgid "Ignore All"
+msgstr ""
+
+#. interface
+#: crates/ui-egui/src/spelling.rs
+msgid "Ignore All is full."
+msgstr ""
+
+#. interface
+#: crates/ui-egui/src/spelling_dialog.rs
+msgid "Ignore Once"
+msgstr ""
+
+#. interface
+#: crates/ui-egui/src/backstage.rs
+msgid "Ignore words in UPPERCASE"
+msgstr ""
+
+#. interface
+#: crates/ui-egui/src/backstage.rs
+msgid "Ignore words that contain numbers"
+msgstr ""
+
 #. ribbon, ribbon location
 #: crates/engine/src/cmd/picture.rs crates/ui-egui/src/ribbon.rs
 #, fuzzy
@@ -8864,6 +8955,11 @@ msgstr "Navedi koledarje"
 #, fuzzy
 msgid "List Contacts"
 msgstr "Navedi stike"
+
+#. command label
+#: crates/ui-egui/src/lib.rs
+msgid "List Dictionary"
+msgstr ""
 
 #. command label
 #: crates/engine/src/cmd/calendar.rs
@@ -11375,6 +11471,11 @@ msgstr "Ni predlogov črkovanja"
 msgid "No such account"
 msgstr "Takega računa ni"
 
+#. interface
+#: crates/ui-egui/src/spelling_dialog.rs
+msgid "No suggestions"
+msgstr ""
+
 #. android
 #: apps/mailcraft-android/app/src/main/kotlin/work/mailcraft/android/TodayScreen.kt
 #, fuzzy
@@ -11620,6 +11721,11 @@ msgstr "Ni za pošto ali pa je organa: Dodaj med stike ga izpusti."
 #, fuzzy
 msgid "Not in Outlook's list: no colour there"
 msgstr "Ni na Outlookovem seznamu: tam ni barve"
+
+#. interface
+#: crates/ui-egui/src/spelling_dialog.rs
+msgid "Not in dictionary"
+msgstr ""
 
 #. interface
 #: crates/ui-egui/src/backstage.rs
@@ -14039,6 +14145,11 @@ msgstr ""
 msgid "Remove from Calendar"
 msgstr "Odstrani iz koledarja"
 
+#. command label
+#: crates/ui-egui/src/lib.rs
+msgid "Remove from Dictionary"
+msgstr ""
+
 #. interface
 #: crates/ui-egui/src/nav.rs crates/ui-egui/src/people_view.rs
 #, fuzzy
@@ -14204,6 +14315,11 @@ msgstr "Zamenjaj"
 #, fuzzy
 msgid "Replace All"
 msgstr "Zamenjaj vse"
+
+#. command label
+#: crates/engine/src/cmd/compose.rs
+msgid "Replace Subject Text"
+msgstr ""
 
 #. command label
 #: crates/engine/src/cmd/format.rs
@@ -16835,14 +16951,30 @@ msgstr "Prostor starejše pošte"
 msgid "Space for mail, at most"
 msgstr "Prostor za pošto, največ"
 
-#. ribbon
-#: crates/ui-egui/src/ribbon.rs
+#. interface, ribbon
+#: crates/ui-egui/src/backstage.rs crates/ui-egui/src/dialogs.rs crates/ui-egui/src/ribbon.rs
 #, fuzzy
 msgid "Spelling"
 msgstr "Črkovanje"
 
+#. command label
+#: crates/engine/src/cmd/writing_tools.rs
+#, fuzzy
+msgid "Spelling & Grammar"
+msgstr "Črkovanje & slovnica"
+
+#. command label
+#: crates/ui-egui/src/lib.rs
+msgid "Spelling Options"
+msgstr ""
+
 #. interface
-#: crates/ui-egui/src/spelling.rs
+#: crates/ui-egui/src/dialogs.rs crates/ui-egui/src/spelling_dialog.rs
+msgid "Spelling is off for this message"
+msgstr ""
+
+#. interface
+#: crates/ui-egui/src/backstage.rs crates/ui-egui/src/dialogs.rs crates/ui-egui/src/spelling.rs crates/ui-egui/src/spelling_dialog.rs
 #, fuzzy
 msgid "Spelling is unavailable on this platform"
 msgstr "Preverjanje črkovanja na tej platformi ni na voljo"
@@ -17128,6 +17260,11 @@ msgstr "Predlagaj nastavitve računa"
 #, fuzzy
 msgid "Suggest Recipients"
 msgstr "Predlagaj prejemnike"
+
+#. interface
+#: crates/ui-egui/src/spelling_dialog.rs
+msgid "Suggestions"
+msgstr ""
 
 #. date and time, name
 #: crates/i18n/src/date.rs crates/time/src/lib.rs
@@ -17694,10 +17831,20 @@ msgid "That sign-in is for somebody else's mailbox, not this account's. Nothing 
 msgstr "Ta prijava je za poštni predal nekoga drugega, ne tega računa. Nič ni bilo shranjeno."
 
 #. interface
+#: crates/ui-egui/src/spelling.rs
+msgid "That word isn't in the custom dictionary."
+msgstr ""
+
+#. interface
 #: crates/ui-egui/src/report_problem.rs
 #, fuzzy
 msgid "That's as much as a link to GitHub can carry: add the rest on GitHub once the page is open."
 msgstr "Toliko lahko prenese povezava do GitHuba: preostanek dodajte na GitHubu, ko se stran odpre."
+
+#. interface
+#: crates/ui-egui/src/spelling_dialog.rs
+msgid "That's the same word."
+msgstr ""
 
 #. interface
 #: crates/ui-egui/src/forms.rs
@@ -18228,6 +18375,11 @@ msgstr "Stiki, ki ste jih izbrali"
 #, fuzzy
 msgid "The conversations' messages in other folders stay where they are."
 msgstr "Sporočila pogovorov v drugih mapah ostanejo, kjer so."
+
+#. interface
+#: crates/ui-egui/src/spelling.rs
+msgid "The custom dictionary is full."
+msgstr ""
 
 #. interface
 #: crates/ui-egui/src/forms.rs
@@ -19452,7 +19604,17 @@ msgid "The space the folder's own messages take on this computer"
 msgstr "Prostor, ki ga na tem računalniku zavzamejo lastna sporočila mape"
 
 #. interface
-#: crates/ui-egui/src/spelling.rs
+#: crates/ui-egui/src/spelling_dialog.rs
+msgid "The spelling check is complete."
+msgstr ""
+
+#. interface
+#: crates/ui-egui/src/spelling_dialog.rs
+msgid "The spelling check is complete. Some of the message was not checked."
+msgstr ""
+
+#. interface
+#: crates/ui-egui/src/spelling.rs crates/ui-egui/src/spelling_dialog.rs
 #, fuzzy
 msgid "The spelling dictionary is unavailable"
 msgstr "Črkovalni slovar ni na voljo"
@@ -22012,6 +22174,11 @@ msgid "Words, from:, to:, category:, on:…"
 msgstr "Besede, from:, to:, category:, on:…"
 
 #. interface
+#: crates/ui-egui/src/backstage.rs
+msgid "Words, separated by commas or spaces"
+msgstr ""
+
+#. interface
 #: crates/ui-egui/src/address_book.rs crates/ui-egui/src/forms.rs
 #, fuzzy
 msgid "Work"
@@ -24176,8 +24343,8 @@ msgstr "nič od tega iskanja ni mogoče zahtevati od strežnika"
 msgid "nothing to redo"
 msgstr "ni česa ponoviti"
 
-#. what a command says
-#: crates/engine/src/cmd/format.rs
+#. what a command says, why a command can't run
+#: crates/engine/src/cmd/compose.rs crates/engine/src/cmd/format.rs
 #, fuzzy
 msgid "nothing to redo in the message"
 msgstr "v sporočilu ni česa ponoviti"
@@ -24188,8 +24355,8 @@ msgstr "v sporočilu ni česa ponoviti"
 msgid "nothing to undo"
 msgstr "ni česa razveljaviti"
 
-#. what a command says
-#: crates/engine/src/cmd/format.rs
+#. what a command says, why a command can't run
+#: crates/engine/src/cmd/compose.rs crates/engine/src/cmd/format.rs
 #, fuzzy
 msgid "nothing to undo in the message"
 msgstr "v sporočilu ni česa razveljaviti"
@@ -24779,6 +24946,11 @@ msgstr "brskalnik ne more hraniti kopije poštnega predala poleg njega: preklopi
 #, fuzzy
 msgid "the browser can't read folders by path"
 msgstr "brskalnik ne more brati map po poti"
+
+#. what a command says
+#: crates/engine/src/cmd/writing_tools.rs
+msgid "the built-in dictionary is unavailable"
+msgstr ""
 
 #. interface
 #: crates/ui-egui/src/dialogs.rs
@@ -25645,7 +25817,7 @@ msgid "the text has a character that can't be sent"
 msgstr "besedilo vsebuje znak, ki ga ni mogoče poslati"
 
 #. what a command says
-#: crates/model/src/rich/body.rs
+#: crates/engine/src/cmd/compose.rs crates/engine/src/cmd/edit.rs crates/model/src/rich/body.rs
 #, fuzzy
 msgid "the text has changed at the place to replace"
 msgstr "besedilo na mestu zamenjave se je spremenilo"
@@ -27642,6 +27814,16 @@ msgstr[1] "{n} sporočili sta že tukaj in sta izpuščeni"
 msgstr[2] "{n} sporočila so že tukaj in so izpuščena"
 msgstr[3] "{n} sporočil je že tukaj in je izpuščenih"
 
+#. what a command says
+#: crates/engine/src/undo.rs
+#, fuzzy
+msgid "{n} message isn't moved: its mail server has moved or removed it since, or the folder it was to go to is gone or won't take it."
+msgid_plural "{n} messages aren't moved: their mail server has moved or removed them since, or the folders they were to go to are gone or won't take them."
+msgstr[0] "{n} sporočilo ni premaknjeno: poštni strežnik ga je medtem premaknil ali odstranil ali pa mapa, v katero naj bi šlo, ne obstaja več ali ga ne sprejme."
+msgstr[1] "{n} sporočili nista premaknjeni: poštni strežnik ju je medtem premaknil ali odstranil ali pa mapi, v kateri naj bi bili, ne obstajata več ali ju ne sprejmeta."
+msgstr[2] "{n} sporočila niso premaknjena: poštni strežnik jih je medtem premaknil ali odstranil ali pa mape, v katere naj bi šla, ne obstajajo več ali jih ne sprejmejo."
+msgstr[3] "{n} sporočil ni premaknjenih: poštni strežnik jih je medtem premaknil ali odstranil ali pa mape, v katere naj bi šla, ne obstajajo več ali jih ne sprejmejo."
+
 #. android
 #: apps/mailcraft-android/app/src/main/kotlin/work/mailcraft/android/MailListScreen.kt
 #, fuzzy
@@ -28283,6 +28465,15 @@ msgstr[2] "{n} tedne prej"
 msgstr[3] "{n} tednov prej"
 
 #. interface
+#: crates/ui-egui/src/backstage.rs
+msgid "{n} word"
+msgid_plural "{n} words"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. interface
 #: crates/ui-egui/src/calendar_sync.rs
 #, fuzzy
 msgid "{n}. {step}: {result} ({answered}). {said}"
@@ -28635,10 +28826,6 @@ msgstr "−Vrstice"
 #~ msgstr[1] "{n} ujemajoči se sporočili"
 #~ msgstr[2] "{n} ujemajoča se sporočila"
 #~ msgstr[3] "{n} ujemajočih se sporočil"
-
-#, fuzzy
-#~ msgid "Spelling & Grammar"
-#~ msgstr "Črkovanje & slovnica"
 
 #, fuzzy
 #~ msgid "As the people you write to see it"
