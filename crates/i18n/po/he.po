@@ -324,7 +324,7 @@ msgstr "1. יש להעתיק את ההודעה שלהלן ולשלוח אותה 
 #: crates/ui-egui/src/account_setup.rs
 #, fuzzy
 msgid "1. Turn on 2-Step Verification for your Google account, if it isn't on yet: Google offers app passwords only then."
-msgstr "1"
+msgstr "1. הפעלת אימות דו-שלבי בחשבון Google, אם עדיין אינו פעיל: רק אז Google מציעה סיסמאות לאפליקציות."
 
 #. interface
 #: crates/ui-egui/src/calendar_view.rs
@@ -378,7 +378,7 @@ msgstr "שנתיים"
 #: crates/ui-egui/src/account_setup.rs
 #, fuzzy
 msgid "2. Open Google's App passwords page, sign in to the account you are adding, type a name such as MailCraft and press Create."
-msgstr "2"
+msgstr "2. פתיחת דף סיסמאות האפליקציות של Google, כניסה לחשבון שמתווסף, הקלדת שם כגון MailCraft ולחיצה על Create."
 
 #. android
 #: apps/mailcraft-android/app/src/main/kotlin/work/mailcraft/android/AccountScreens.kt
@@ -414,7 +414,7 @@ msgstr "3 חודשים"
 #: crates/ui-egui/src/account_setup.rs
 #, fuzzy
 msgid "3. Copy the 16-letter password Google shows, which it shows only once, and paste it here."
-msgstr "3"
+msgstr "3. העתקת הסיסמה בת 16 האותיות ש-Google מציגה (היא מוצגת פעם אחת בלבד) והדבקתה כאן."
 
 #. interface
 #: crates/ui-egui/src/calendar_view.rs
@@ -1700,7 +1700,7 @@ msgstr "כתובת ללא דומיין."
 #: crates/ui-egui/src/people_view.rs
 #, fuzzy
 msgid "An agent made this contact or gave it an address. Until you edit it, its addresses don't bring pictures in mail from your contacts."
-msgstr "ס"
+msgstr "סוכן יצר את איש הקשר הזה או נתן לו כתובת. עד שתערכו אותו, הכתובות שלו אינן מורידות תמונות בדואר מאנשי הקשר שלכם."
 
 #. interface
 #: crates/ui-egui/src/agent_gate.rs
@@ -5236,7 +5236,7 @@ msgstr "הורדת תמונות"
 #: crates/ui-egui/src/dialogs.rs
 #, fuzzy
 msgid "Download Pictures from Contacts"
-msgstr "ה"
+msgstr "הורדת תמונות מאנשי קשר"
 
 #. interface
 #: crates/ui-egui/src/dialogs.rs
@@ -5254,13 +5254,13 @@ msgstr "הורדה אוטומטית של תמונות בהודעות דואר"
 #: crates/ui-egui/src/lib.rs
 #, fuzzy
 msgid "Download Pictures in Mail from Contacts"
-msgstr "ה"
+msgstr "הורדת תמונות בדואר מאנשי קשר"
 
 #. interface
 #: crates/ui-egui/src/dialogs.rs
 #, fuzzy
 msgid "Download from contacts"
-msgstr "ה"
+msgstr "הורדה מאנשי קשר"
 
 #. interface
 #: crates/ui-egui/src/dialogs.rs
@@ -5302,7 +5302,7 @@ msgstr "הורדת תמונות בדואר באופן אוטומטי"
 #: crates/ui-egui/src/reading/remote.rs
 #, fuzzy
 msgid "Download pictures in mail from people in my contacts"
-msgstr "ה"
+msgstr "הורדת תמונות בדואר מאנשים שבאנשי הקשר שלי"
 
 #. interface
 #: crates/ui-egui/src/reading/signature.rs
@@ -7424,7 +7424,7 @@ msgstr "קו אופקי"
 #: crates/ui-egui/src/account_setup.rs
 #, fuzzy
 msgid "How do I make an app password?"
-msgstr "א"
+msgstr "איך יוצרים סיסמה לאפליקציה?"
 
 #. interface
 #: crates/ui-egui/src/account_setup.rs crates/ui-egui/src/keep_offline.rs
@@ -7478,7 +7478,7 @@ msgstr "אם Google מציינת שהיישום נמצא בבדיקה, יש לב
 #: crates/ui-egui/src/account_setup.rs
 #, fuzzy
 msgid "If Google's page says the setting isn't available, either 2-Step Verification is off or the account doesn't allow app passwords (some work or school accounts, accounts with Advanced Protection, and accounts whose 2-Step Verification uses only security keys)."
-msgstr "א"
+msgstr "אם הדף של Google אומר שההגדרה אינה זמינה, האימות הדו-שלבי כבוי או שהחשבון אינו מאפשר סיסמאות לאפליקציות (חלק מחשבונות העבודה או בית הספר, חשבונות עם הגנה מתקדמת, וחשבונות שהאימות הדו-שלבי שלהם משתמש במפתחות אבטחה בלבד)."
 
 #. interface
 #: crates/ui-egui/src/account_setup/help.rs
@@ -12306,7 +12306,7 @@ msgstr "פתיחת קובץ מצורף של טיוטה"
 #: crates/ui-egui/src/account_setup.rs
 #, fuzzy
 msgid "Open Google's App passwords page"
-msgstr "פ"
+msgstr "פתיחת דף סיסמאות האפליקציות של Google"
 
 #. interface
 #: crates/ui-egui/src/data_removal.rs
@@ -13056,7 +13056,7 @@ msgstr "תמונות בדואר"
 #: crates/ui-egui/src/reading/remote.rs
 #, fuzzy
 msgid "Pictures in mail from an address in your contacts are downloaded without asking: that address exactly, only when your mail server confirms the message came from that address's domain (it can't confirm the address itself), and never in Junk E-mail. Each such sender's server learns that you opened the message, when, and from which internet address. A contact an agent made or gave an address to doesn't count until you edit it."
-msgstr "ת"
+msgstr "תמונות בדואר מכתובת שבאנשי הקשר שלכם מורדות בלי לשאול: בדיוק אותה כתובת, רק כששרת הדואר שלכם מאשר שההודעה הגיעה מהדומיין של הכתובת (את הכתובת עצמה הוא אינו יכול לאשר), ולעולם לא בדואר זבל. השרת של כל שולח כזה יודע שפתחתם את ההודעה, מתי ומאיזו כתובת אינטרנט. איש קשר שסוכן יצר או נתן לו כתובת אינו נחשב עד שתערכו אותו."
 
 #. android, interface
 #: apps/mailcraft-android/app/src/main/kotlin/work/mailcraft/android/PicturesBanner.kt crates/ui-egui/src/reading/remote.rs
@@ -13086,7 +13086,7 @@ msgstr "תמונות מהרשת יורדו בכל הודעה שתפתח. כך ה
 #: crates/ui-egui/src/dialogs.rs
 #, fuzzy
 msgid "Pictures on the web will be downloaded in mail from the people in your contacts. Their servers then learn when you opened the message and from which internet address."
-msgstr "ת"
+msgstr "תמונות מהרשת יורדו בדואר מהאנשים שבאנשי הקשר שלכם. השרתים שלהם יידעו אז מתי פתחתם את ההודעה ומאיזו כתובת אינטרנט."
 
 #. interface
 #: crates/ui-egui/src/signatures.rs
@@ -22130,7 +22130,7 @@ msgstr "אין לך הרשאת גישה אל {address}. אם ההרשאה נית
 #: crates/ui-egui/src/reading/remote.rs
 #, fuzzy
 msgid "You download pictures from your contacts, but the mail server didn't confirm that this message came from this one, so it is asked first."
-msgstr "א"
+msgstr "אתם מורידים תמונות מאנשי הקשר שלכם, אבל שרת הדואר לא אישר שההודעה הזו הגיעה מאיש קשר זה, ולכן תתבקשו לאשר קודם."
 
 #. interface
 #: crates/ui-egui/src/signatures.rs
